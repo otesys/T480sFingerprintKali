@@ -33,6 +33,10 @@ Das Skript darf nur verwendet werden, wenn die Ausgabe `06cb:009a` enthält. Bei
 - Ein Benutzer mit `sudo`-Rechten
 - Ein zweites, geöffnetes Root-Terminal als Rückfallebene während der PAM-Konfiguration
 
+## Danke
+
+Falls Du Danke sagen möchtest: <a href="https://www.paypal.com/ncp/payment/JKQ5QB8FPPJL4>`Spende via PayPal`</a>
+
 ## Installation
 
 ```bash
