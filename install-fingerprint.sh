@@ -104,6 +104,10 @@ systemctl enable python3-validity.service || true
 systemctl restart python3-validity.service
 sleep 4
 
+echo "== Systemd tmpfiles-Konfiguration =="
+echo 'd /run/python-validity 0755 root root -' | sudo tee /etc/tmpfiles.d/python-validity.conf > /dev/null
+sudo systemd-tmpfiles --create /etc/tmpfiles.d/python-validity.conf
+
 echo "== Test =="
 systemctl is-active python3-validity open-fprintd || true
 sudo -u "$USER_NAME" fprintd-list "$USER_NAME" || true
