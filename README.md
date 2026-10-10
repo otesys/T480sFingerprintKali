@@ -1,16 +1,16 @@
-# Fingerprint-Setup für Kali Linux (T480S)
+# Fingerprint-Setup für Kali Linux (T480s)
 
 Automatisiertes Installationsskript für Fingerprint-Authentifizierung auf Kali Linux mit `open-fprintd` + `python-validity` Backend.
 
 Getestet auf:
-- **Lenovo ThinkPad T480S** mit Synaptics Metallica MIS Touch Fingerprint Reader (USB ID `06cb:009a`)
+- **Lenovo ThinkPad T480s** mit Synaptics Metallica MIS Touch Fingerprint Reader (USB ID `06cb:009a`)
 
 ## Kompatibilität mit anderen Modellen
 
 Dieses Skript funktioniert **prinzipiell** mit allen Fingerprint-Sensoren, die von `python-validity` unterstützt werden. Das sind insbesondere:
 
 - Synaptics-Sensoren (ID `06cb:*`):
-  - T480S (getestet: `06cb:009a`)
+  - T480s (getestet: `06cb:009a`)
   - T490
   - T580
   - X1 Carbon (Gen 5-7)
@@ -63,6 +63,7 @@ fprintd-enroll $USER
 ```
 
 Finger mehrmals von Wurzel zur Spitze über den Sensor ziehen, bis "enroll-completed" erscheint.
+Ohne weitere Angaben wird dies für den linken Zeigefinger gespeichert
 
 ### Schritt 4: Test
 
