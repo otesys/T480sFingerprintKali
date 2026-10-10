@@ -35,7 +35,7 @@ Das Skript darf nur verwendet werden, wenn die Ausgabe `06cb:009a` enthält. Bei
 
 ## Danke
 
-Falls Du Danke sagen möchtest: <a href="https://www.paypal.com/ncp/payment/JKQ5QB8FPPJL4>`Spende via PayPal`</a>
+Falls Du Danke sagen möchtest: <a href="https://www.paypal.com/ncp/payment/JKQ5QB8FPPJL4">`Spende via PayPal`</a>
 
 ## Installation
 
