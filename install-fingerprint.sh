@@ -109,6 +109,7 @@ systemctl is-active python3-validity open-fprintd || true
 sudo -u "$USER_NAME" fprintd-list "$USER_NAME" || true
 
 echo "== PAM =="
+echo "Im folgenden Menü bitte 'Fingerprint authentication' auswählen und aktivieren."
 read -r -p "Zum Fortfahren Enter drücken ... "
 pam-auth-update
 
