@@ -132,6 +132,23 @@ sudo pam-auth-update
 - **Neuinstallation**: Angelerni Finger können bei Neupaarung verloren gehen.
 - **GDM**: Manche Display-Manager unterstützen Fingerprint-Login nicht. `sudo` funktioniert immer.
 
+## Lizenz
+
+Dieses Projekt ist unter der **GNU General Public License v2 (GPLv2)** lizenziert.
+
+Siehe [`LICENSE`](LICENSE) für die vollständige Lizenzierungsinformation.
+
+### Abhängigkeiten
+
+- **open-fprintd**: GPLv2
+- **python-validity**: MIT
+
+Die Kombination wird unter GPLv2 veröffentlicht.
+
+### Haftungsausschluss
+
+Dieses Skript wird **AS IS** bereitgestellt, **ohne Haftung oder Garantie jeglicher Art**. Der Benutzer trägt die volle Verantwortung für die Nutzung und alle Folgen einer Verwendung.
+
 ## Weitere Links
 
 - [uunicorn/open-fprintd](https://github.com/uunicorn/open-fprintd)
