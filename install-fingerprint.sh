@@ -97,16 +97,16 @@ install -m 644 "$OF_DIR/dbus_service/net.reactivated.Fprint.service" /usr/share/
 install -m 644 "$PV_DIR/dbus_service/io.github.uunicorn.Fprint.conf" /usr/share/dbus-1/system.d/
 systemctl reload dbus
 
+echo "== Systemd tmpfiles-Konfiguration =="
+echo 'd /run/python-validity 0755 root root -' | sudo tee /etc/tmpfiles.d/python-validity.conf > /dev/null
+sudo systemd-tmpfiles --create /etc/tmpfiles.d/python-validity.conf
+
 echo "== Dienste =="
 systemctl daemon-reload
 systemctl enable open-fprintd-suspend.service open-fprintd-resume.service || true
 systemctl enable python3-validity.service || true
 systemctl restart python3-validity.service
 sleep 4
-
-echo "== Systemd tmpfiles-Konfiguration =="
-echo 'd /run/python-validity 0755 root root -' | sudo tee /etc/tmpfiles.d/python-validity.conf > /dev/null
-sudo systemd-tmpfiles --create /etc/tmpfiles.d/python-validity.conf
 
 echo "== Test =="
 systemctl is-active python3-validity open-fprintd || true
