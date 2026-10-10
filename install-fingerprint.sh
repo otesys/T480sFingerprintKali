@@ -15,6 +15,9 @@ if [ -z "$USER_NAME" ] || [ "$USER_NAME" = root ]; then echo "Bitte per sudo aus
 grep -qi kali /etc/os-release || { echo "Kein Kali erkannt."; exit 1; }
 lsusb | grep -q "06cb:009a" || { echo "Sensor 06cb:009a nicht gefunden."; exit 1; }
 
+echo "Hinweis: Öffne jetzt einen zweiten Terminal-Tab (oder eine TTY mit Strg+Alt+F3), starte dort 'sudo -i' und lass die Sitzung offen. Sie dient als Rückfallebene, falls die PAM-Konfiguration Probleme macht."
+read -r -p "Zum Fortfahren Enter drücken ... "
+
 echo "== Backup =="
 BK="/root/fingerprint-backup-$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$BK"
@@ -106,8 +109,7 @@ systemctl is-active python3-validity open-fprintd || true
 sudo -u "$USER_NAME" fprintd-list "$USER_NAME" || true
 
 echo "== PAM =="
-echo "Jetzt im Menü 'Fingerprint authentication' aktivieren."
-echo "Lass ein Root-Terminal offen, bevor du testest."
+read -r -p "Zum Fortfahren Enter drücken ... "
 pam-auth-update
 
 echo "Fertig. Finger anlernen mit: fprintd-enroll $USER_NAME"
