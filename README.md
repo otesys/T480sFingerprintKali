@@ -2,13 +2,20 @@
 
 Dieses Repository enthält ein Installationsskript für den Synaptics **Metallica MIS Touch Fingerprint Reader** mit der USB-ID `06cb:009a` unter Kali Linux.
 
+99,9% des Codes stammen nicht aus meiner Feder, sondern hat die KI geschrieben ;-)
+
 Es verwendet:
 
 - <a href="https://github.com/uunicorn/open-fprintd">`open-fprintd`</a>
 - <a href="https://github.com/uunicorn/python-validity">`python-validity`</a>
 - `fprintd` und PAM für die Anmeldung bzw. `sudo`-Authentifizierung
 
-> **Status:** Erfolgreich getestet auf einem Lenovo ThinkPad **T480s** mit Kali Linux und dem Sensor `06cb:009a`.
+## Status
+
+Ich habe es auf einer frischen Kali-Installation getestet auf einem Lenovo ThinkPad **T480s** mit dem Sensor `06cb:009a`.
+Es gab noch eine Fehlermeldung, die sich mit diesem <a href="https://github.com/otesys/T480sFingerprintKali/commit/dc7bc511d6e5e4a5e3527aba9fe9d3c1a49908cb">`Commit`</a> beseitigen ließ. Danach lief es ohne Fehler durch, ich habe mir dann aber nicht mehr die Mühe gemacht, für einen Test alles nochmal frisch aufzusetzen. Es sollte funktionieren, ich würde mich über eine Bestätigung freuen.
+
+
 
 ## Kompatibilität
 
